@@ -1,45 +1,38 @@
-import { notFound } from "next/navigation";
-import { productos } from "@/lib/productos";
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
+import { productos } from "@/lib/productos";
+import Carousel from "./components/Carousel";
 
-export default function ProductPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const producto = productos.find((p) => p.slug === params.slug);
-
-  if (!producto) return notFound();
-
+export default function HomePage() {
   return (
-    <div className="container py-5">
+    <main className="container py-5">
+      <Carousel />
+
       <div className="row">
-        <div className="col-md-6">
-          <Image
-            src={producto.imagen}
-            alt={producto.nombre}
-            width={600}
-            height={400}
-            className="img-fluid rounded shadow"
-          />
-        </div>
-        <div className="col-md-6">
-          <h1 className="mb-3">{producto.nombre}</h1>
-          <p>{producto.descripcion}</p>
-          {producto.video && (
-            <div className="mt-4">
-              <h5>Video:</h5>
-              <div className="ratio ratio-16x9">
-                <iframe
-                  src={producto.video}
-                  title={producto.nombre}
-                  allowFullScreen
-                ></iframe>
+        {productos.map((producto) => (
+          <div key={producto.slug} className="col-6 col-md-4 col-lg-3 mb-4">
+            <Link href={`/productos/${producto.slug}`} className="text-decoration-none text-dark">
+              <div className="card h-100 shadow-sm">
+                <div className="image-wrapper">
+                  <Image
+                    src={producto.imagen}
+                    alt={producto.nombre}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+                           (max-width: 1200px) 50vw,
+                           33vw"
+                    priority
+                    style={{ objectFit: "cover" }}
+                    className="card-img-top rounded"
+                  />
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            </Link>
+          </div>
+        ))}
       </div>
-    </div>
+    </main>
   );
 }
