@@ -11,7 +11,7 @@ type PageProps = {
   };
 };
 
-export default function ProductPage({ params }: PageProps) {
+export default async function ProductPage({ params }: PageProps) {
   const producto = productos.find((p) => p.slug === params.slug);
 
   if (!producto) return notFound();
