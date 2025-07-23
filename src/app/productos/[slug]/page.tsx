@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { productos } from "@/lib/productos";
-import Carousel from "./components/Carousel";
+import Carousel from '../../components/Carousel';
 
 export default function HomePage() {
   return (
