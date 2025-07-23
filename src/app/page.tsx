@@ -1,5 +1,4 @@
-"use client";
-
+// app/page.tsx (server component, sin "use client")
 import Link from "next/link";
 import Image from "next/image";
 import { productos } from "@/lib/productos";
@@ -15,9 +14,9 @@ export default function HomePage() {
           <div key={producto.slug} className="col-6 col-md-4 col-lg-3 mb-4">
             <Link href={`/productos/${producto.slug}`} className="text-decoration-none text-dark">
               <div className="card h-100 shadow-sm">
-                <div 
-                  className="position-relative" // <-- importante para Image con fill
-                  style={{ width: "100%", height: "200px" }} // tamaño fijo para que Image funcione con fill
+                <div
+                  className="position-relative"
+                  style={{ width: "100%", height: "200px" }}
                 >
                   <Image
                     src={producto.imagen}
