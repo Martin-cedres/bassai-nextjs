@@ -1,17 +1,12 @@
-// src/app/productos/[slug]/page.tsx
-
 import { notFound } from "next/navigation";
 import { productos } from "@/lib/productos";
 import Image from "next/image";
 
-// ✅ Asegurate que este tipo NO esté definido como `Promise<any>`
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function ProductPage({ params }: PageProps) {
+export default function ProductPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const producto = productos.find((p) => p.slug === params.slug);
 
   if (!producto) return notFound();
