@@ -19,7 +19,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Productos Bassai",
   description: "Limpieza concentrada para tu hogar y negocio",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
+
+
+
+
 
 export default function RootLayout({
   children,
@@ -39,6 +46,12 @@ export default function RootLayout({
         </a>
         {/* Componente cliente para JS */}
         <BootstrapScripts />
+
+         {/* Footer visible en todas las páginas */}
+        <footer className="text-center text-muted py-3">
+          © 2025 Bassai San José · Distribuidor oficial · Todos los derechos reservados
+        </footer>
+
       </body>
     </html>
   );
