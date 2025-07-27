@@ -16,7 +16,7 @@ export default function ProductoDetallePage() {
     <main className="container py-5">
       <article className="row">
         {/* Imagen: primero en móviles y notebooks */}
-        <div className="col-12 col-md-6 order-1">
+        <div className="col-12 col-md-6 order-md-1">
           <Image
             src={producto.imagen}
             alt={producto.nombre}
@@ -28,7 +28,7 @@ export default function ProductoDetallePage() {
         </div>
 
         {/* Descripción: segundo en móviles, lado derecho en notebooks */}
-        <div className="col-12 col-md-6 order-2 mt-4 mt-md-0">
+        <div className="col-12 col-md-6 order-md-2 mt-4 mt-md-0">
           <h1 className="fs-1 fw-bold">{producto.nombre}</h1>
           <p className="fs-4">{producto.descripcion}</p>
         </div>
