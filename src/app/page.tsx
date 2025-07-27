@@ -22,7 +22,7 @@ export default function HomePage() {
         {productos.map((producto) => (
           <div key={producto.slug} className="col-6 col-md-4 col-lg-3 mb-4">
             <Link href={`/productos/${producto.slug}`} className="text-decoration-none text-dark">
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 border-0">
                 <div className="image-wrapper">
                   <Image
                     src={producto.imagen}
@@ -32,6 +32,9 @@ export default function HomePage() {
                     className="card-img-top rounded"
                   />
                 </div>
+                <button className="w-100 mt-3 btn btn-primary">
+                  Ver más detalles
+                </button>
               </div>
             </Link>
           </div>

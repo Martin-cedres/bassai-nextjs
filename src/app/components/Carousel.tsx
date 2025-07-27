@@ -13,7 +13,7 @@ export default function Carousel() {
       id="carouselExampleIndicators"
       className="carousel slide mb-5 carousel-rounded"  // <-- Aquí le das separación con margin-bottom
       data-bs-ride="carousel"
-      data-bs-interval="5000" // 5 segundos
+      data-bs-interval="3000" // 3 segundos
     >
       <div className="carousel-indicators">
         <button

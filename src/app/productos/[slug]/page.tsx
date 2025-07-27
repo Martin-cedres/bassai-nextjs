@@ -1,4 +1,3 @@
-// app/productos/[slug]/page.tsx
 "use client";
 
 import { useParams } from "next/navigation";
@@ -15,8 +14,9 @@ export default function ProductoDetallePage() {
 
   return (
     <main className="container py-5">
-      <div className="row">
-        <div className="col-md-6">
+      <article className="row">
+        {/* Imagen: primero en móviles y notebooks */}
+        <div className="col-12 col-md-6 order-1">
           <Image
             src={producto.imagen}
             alt={producto.nombre}
@@ -26,12 +26,13 @@ export default function ProductoDetallePage() {
             style={{ objectFit: "cover" }}
           />
         </div>
-        <div className="col-md-6">
-          <h1>{producto.nombre}</h1>
-          <p>{producto.descripcion}</p>
-          {/* Agregá más detalles si querés, como video, otras imágenes, etc */}
+
+        {/* Descripción: segundo en móviles, lado derecho en notebooks */}
+        <div className="col-12 col-md-6 order-2 mt-4 mt-md-0">
+          <h1 className="fs-1 fw-bold">{producto.nombre}</h1>
+          <p className="fs-4">{producto.descripcion}</p>
         </div>
-      </div>
+      </article>
     </main>
   );
 }

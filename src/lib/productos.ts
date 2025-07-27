@@ -11,7 +11,7 @@ export const productos = [
        "/productos/desengrasante-concentrado/antesydespues.jpg",
       
     ],
-    descripcion: "Poderoso desengrasante multiuso concentrado. Ideal para cocina, autos y más.",
+    descripcion: "Sanitizante con amonio cuaternario, desarrollado para limpieza y desinfección de diferentes ambientes y superficies en una sola tarea. Sillas, escritorios, ropa, acolchados, camas, piletas, baños, pestillos, llaves, herramientas, controles remotos, hongos, pisos, paredes, coches y mucho más.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   },
   {
@@ -25,7 +25,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Detergente con gran poder de limpieza, formulado para realizar múltiples tareas. Capacidad de mantener la humectación natural de la piel. Vajilla, residuos orgánicos vidrios, maquinaria, frutas y verduras, ropa fina, higiene personal, shampoo para mascotas y todo lo que puedas imaginar!.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   },
 
@@ -40,7 +40,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Desengrasante con gran poder de limpieza, formulado para realizar múltiples tareas. Hornos, campanas, pisos, paredes, escritorios, vidrios, tapizados, maquinaria, parrillas, extractores, sarro, óxidos y grasas, baños, etc. Actúa de igual manera aguas salobres.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   },
 
@@ -56,7 +56,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Cera a base de Carnauba, soluble en agua con la capacidad de limpiar y encerar en la misma pasada con efecto antideslizante Usos principales, lavado y encerado de todo tipo de pisos y autos. No deja residuos jabonosos, facilita limpiezas posteriores.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
 
@@ -71,7 +71,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Acondiciona, protege, abrillanta y repele el polvo. Compuesto por una emulsión de siliconas, agentes de autobrillo, presenta poder antielectroestático. Exclusivo para maderas, metales, superficies cristalinas, plásticos, cueros, cuerinas, aparatos electrónicos, etc.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
 
@@ -86,7 +86,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Diseñado para el lavado de todo tipo de prendas, limpia sin agredir. No contiene partículas sólidas ni componentes que afecten los colores. Hipoalergénico, realza los colores, no genera residuos, aroma propio, apto para ropa de bebés.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
 
@@ -101,8 +101,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
-    video: "https://www.youtube.com/embed/pG60jM-HWXY"
+    descripcion: "Suavizante para ropa, apto para todo tipo de fibras. Hipoalergénico, suavidad extrema, efecto antielectrostático, no genera residuos, exquisito aroma.",     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
 
   
@@ -117,7 +116,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Jabón desinfectante, bactericida y virucida, con alto poder de limpieza y rendimiento. Humectantes naturales, efecto residual, con y sin aroma.", 
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
   
@@ -132,7 +131,7 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Limpieza y desinfección de diferentes superficies y ambientes. Odorante de fina fragancia con un germicida de última generación (Amonio Cuaternario). *2 fragancias disponibles.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
  {
@@ -146,7 +145,23 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Perfuma y limpia a fondo. Rinde hasta 10 litros.",
+    descripcion: "Diseñado para la higiene corporal y capilar. Mantiene el pH de la piel balanceado, con poder de regeneración, brindando mayor suavidad y flexibilidad a la misma. *Recomendado para todas las edades.",
+    video: "https://www.youtube.com/embed/pG60jM-HWXY"
+  }, 
+
+
+   {
+    nombre: "Aromatizador",
+    slug: "gearomatizador",
+    imagen: "/productos/aromatizador.jpg",
+    imagenes: [
+      "/img/pisos.jpg",
+      "/img/pisos-antes.jpg",
+      "/productos/desengrasante-concentrado/1 desengrasante.jpg",
+      "/img/pisos-despues.jpg",
+      
+    ],
+    descripcion: "Aromatizador con muy buena durabilidad, aromas exclusivos. Fragancias de inflorecencias botánicas. Bosque Nativo. Campo de flores.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
  
