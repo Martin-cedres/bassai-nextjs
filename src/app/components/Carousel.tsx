@@ -2,22 +2,28 @@
 
 import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Carousel as BootstrapCarousel } from "bootstrap";
 
 export default function Carousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (carouselRef.current) {
-      // Inicializa el carousel con autoplay y el intervalo que quieras
-      const carousel = new BootstrapCarousel(carouselRef.current, {
-        interval: 3000,
-        ride: "carousel",  // esto activa autoplay
-      });
-      return () => {
-        carousel.dispose();
-      };
+    let carouselInstance: any;
+
+    async function loadBootstrapCarousel() {
+      const { Carousel } = await import("bootstrap");
+      if (carouselRef.current) {
+        carouselInstance = new Carousel(carouselRef.current, {
+          interval: 3000,
+          ride: "carousel",
+        });
+      }
     }
+
+    loadBootstrapCarousel();
+
+    return () => {
+      if (carouselInstance) carouselInstance.dispose();
+    };
   }, []);
 
   return (
@@ -26,7 +32,6 @@ export default function Carousel() {
       id="carouselExampleIndicators"
       className="carousel slide mb-5 carousel-rounded"
     >
-     
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src="/carousel0.jpg" className="d-block w-100" alt="Imagen 1" />
