@@ -63,3 +63,14 @@ a {
 }
 
 
+.btn-primary {
+  background-color: #377fd1 !important;
+  border-color: #377fd1 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #2a5db0 !important; /* un azul más oscuro para hover */
+  border-color: #2a5db0 !important;
+}

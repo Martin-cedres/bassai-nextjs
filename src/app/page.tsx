@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { productos } from "@/lib/productos";
 import Carousel from './components/Carousel';
+import SeoHead from "./components/SeoHead"; 
+
 
 
 
@@ -14,11 +16,12 @@ import Carousel from './components/Carousel';
 export default function HomePage() {
   return (
     <main className="container py-5">
+       <SeoHead />
 
       <Carousel />
 
 
-      <div className="row">
+      <div className="row justify-content-center">
         {productos.map((producto) => (
           <div key={producto.slug} className="col-6 col-md-4 col-lg-3 mb-4">
             <Link href={`/productos/${producto.slug}`} className="text-decoration-none text-dark">
@@ -32,7 +35,7 @@ export default function HomePage() {
                     className="card-img-top rounded"
                   />
                 </div>
-                <button className="w-100 mt-3 btn btn-primary">
+                <button className="w-100 mt-1 btn btn-primary">
                   Ver más detalles
                 </button>
               </div>

@@ -1,43 +1,32 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel as BootstrapCarousel } from "bootstrap";
 
 export default function Carousel() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    if (carouselRef.current) {
+      // Inicializa el carousel con autoplay y el intervalo que quieras
+      const carousel = new BootstrapCarousel(carouselRef.current, {
+        interval: 3000,
+        ride: "carousel",  // esto activa autoplay
+      });
+      return () => {
+        carousel.dispose();
+      };
+    }
   }, []);
 
   return (
     <div
+      ref={carouselRef}
       id="carouselExampleIndicators"
-      className="carousel slide mb-5 carousel-rounded"  // <-- Aquí le das separación con margin-bottom
-      data-bs-ride="carousel"
-      data-bs-interval="3000" // 3 segundos
+      className="carousel slide mb-5 carousel-rounded"
     >
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-
+     
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src="/carousel0.jpg" className="d-block w-100" alt="Imagen 1" />

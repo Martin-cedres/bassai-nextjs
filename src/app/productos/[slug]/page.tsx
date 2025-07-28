@@ -9,7 +9,11 @@ export default function ProductoDetallePage() {
   const producto = productos.find((p) => p.slug === slug);
 
   if (!producto) {
-    return <div className="container py-5"><h2>Producto no encontrado</h2></div>;
+    return (
+      <div className="container py-5">
+        <h2>Producto no encontrado</h2>
+      </div>
+    );
   }
 
   return (
@@ -20,10 +24,11 @@ export default function ProductoDetallePage() {
           <Image
             src={producto.imagen}
             alt={producto.nombre}
-            width={600}
-            height={400}
+            width={0}
+            height={0}
+            sizes="100vw"
             className="img-fluid rounded"
-            style={{ objectFit: "cover" }}
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
 
