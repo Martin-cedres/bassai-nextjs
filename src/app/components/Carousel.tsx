@@ -2,11 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "next/image";
 
 export default function Carousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const carouselInstance = useRef<any>(null); // para evitar error de tipo complicado
+  const carouselInstance = useRef<InstanceType<typeof import("bootstrap").Carousel> | null>(null);
 
   useEffect(() => {
     async function loadBootstrapCarousel() {
@@ -18,6 +17,7 @@ export default function Carousel() {
         });
       }
     }
+
     loadBootstrapCarousel();
 
     return () => {
@@ -35,34 +35,13 @@ export default function Carousel() {
     >
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <Image
-            src="/carousel0.jpg"
-            alt="Imagen 1"
-            width={800}
-            height={400}
-            className="d-block w-100"
-            style={{ objectFit: "cover" }}
-          />
+          <img src="/carousel0.jpg" className="d-block w-100" alt="Imagen 1" />
         </div>
         <div className="carousel-item">
-          <Image
-            src="/carousel1.jpg"
-            alt="Imagen 2"
-            width={800}
-            height={400}
-            className="d-block w-100"
-            style={{ objectFit: "cover" }}
-          />
+          <img src="/carousel1.jpg" className="d-block w-100" alt="Imagen 2" />
         </div>
         <div className="carousel-item">
-          <Image
-            src="/carousel2.jpg"
-            alt="Imagen 3"
-            width={800}
-            height={400}
-            className="d-block w-100"
-            style={{ objectFit: "cover" }}
-          />
+          <img src="/carousel2.jpg" className="d-block w-100" alt="Imagen 3" />
         </div>
       </div>
 
