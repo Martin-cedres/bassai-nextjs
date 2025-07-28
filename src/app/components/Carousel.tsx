@@ -1,28 +1,29 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Image from "next/image";
 
 export default function Carousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
-  let carouselInstance: ReturnType<typeof import("bootstrap").Carousel> | null = null;
+  const carouselInstance = useRef<any>(null); // para evitar error de tipo complicado
 
   useEffect(() => {
     async function loadBootstrapCarousel() {
       const { Carousel } = await import("bootstrap");
       if (carouselRef.current) {
-        carouselInstance = new Carousel(carouselRef.current, {
+        carouselInstance.current = new Carousel(carouselRef.current, {
           interval: 3000,
           ride: "carousel",
         });
       }
     }
-
     loadBootstrapCarousel();
 
     return () => {
-      if (carouselInstance) carouselInstance.dispose();
+      if (carouselInstance.current) {
+        carouselInstance.current.dispose();
+      }
     };
   }, []);
 
