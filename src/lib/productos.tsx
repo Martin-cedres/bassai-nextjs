@@ -153,7 +153,7 @@ export const productos = [
    {
     nombre: "Aromatizador",
     slug: "aromatizador",
-    imagen: "/productos/Aromatizador.jpg",
+    imagen: "/productos/aromatizador.jpg",
     imagenes: [
       "/img/pisos.jpg",
       "/img/pisos-antes.jpg",
