@@ -150,7 +150,7 @@ export const productos = [
   }, 
 
 
-   {
+  {
     nombre: "Aromatizador",
     slug: "aromatizador",
     imagen: "/productos/Aromatizador.jpg",
@@ -161,9 +161,12 @@ export const productos = [
       "/img/pisos-despues.jpg",
       
     ],
-    descripcion: "Aromatizador con muy buena durabilidad, aromas exclusivos. Fragancias de inflorecencias botánicas. Bosque Nativo. Campo de flores.",
+    descripcion: "Perfumadores de uso múltiple, muy sustantivo, de muy buena durabilidad en el tiempo. Aromas exclusivos en base a principios activos obtenid.os por un proceso que garantiza su pureza. Se presenta en dos fragancias de inflorescencias botánicas. Bosque Nativo y Campo de Flores.",
     video: "https://www.youtube.com/embed/pG60jM-HWXY"
   }, 
+
+
+   
  
 
 
